@@ -1,16 +1,23 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const SplashScreen = () => {
   return (
-    <View>
-      <Text>This is the splash screen</Text>
-    </View>
+    <ImageBackground
+      source={require('../../assets/splash.jpg')}
+      resizeMode={'cover'}
+      style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text style={styles.text}>This is the Splash d</Text>
+    </ImageBackground>
   );
 };
 
 export default SplashScreen;
 
-const styles = StyleSheet.create({});
-
-
+const styles = StyleSheet.create({
+  text: {
+    fontWeight: 'bold',
+    fontSize: 28,
+    color: '#fff',
+  },
+});
