@@ -1,7 +1,10 @@
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+  setTimeout(() => {
+    navigation.navigate('sign_in');
+  }, 3000);
   return (
     <ImageBackground
       source={require('../../assets/splash.jpg')}
